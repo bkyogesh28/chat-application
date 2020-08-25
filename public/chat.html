@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat application</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+        <link rel="icon" href="/img/favicon.png">
+        <link rel="stylesheet" href="/css/styles.min.css">
+     
+    </head>
+    <body>
+        <div class="chat">
+            <div  id="sidebar" class="chat__sidebar">
+
+            </div>
+            <div class="chat__main">
+                <div id="mess" class="chat__messages">
+
+                </div>
+                <div class="compose">
+                    <form id="send">
+                        <input type="text" id="input" placeholder="message">
+                        <button id="butt" value="send">Send</button>
+                        
+                    </form>
+                    <button id="share" name="geo" value="Location" onclick="click">Share Location</button>
+                </div>
+               
+              
+            </div>
+        </div>
+        
+       
+        <script id="template" type="text/html">
+            <div class="message">
+                <p>
+                    <span class="message__name">{{name}}</span>
+                    <span class="message__meta">{{createdAT}}</span>
+                </p>   
+                <p>{{message}}</p>
+            </div>
+        </script>
+
+        <script id="sidebar-template" type="text/html">
+        <h3 class="room-title">{{room}}</h3>
+        <h4 class="list-title">Participants</h4>
+        <ul class="users">
+            
+                {{#users}}
+                <li>
+                {{name}}
+                </li>
+                {{/users}}
+            
+
+        </ul>
+        
+        
+        
+        
+        </script>
+        <script id="loctemplate" type="text/html">
+            <div>
+                <p> <span class="message__name">{{name}}</span></p>
+                <p><a href="{{url}}" target="_blank">My location</a>  -{{createdAT}}</p>
+            </div>
+        </script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/js/chat.js"></script>
+       
+    </body>
+</html>

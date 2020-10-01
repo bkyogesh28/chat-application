@@ -1,2 +1,2 @@
 # chat-application
- https://yogesh-chatapp.herokuapp.com/
+https://chatapp-yogesh.herokuapp.com/

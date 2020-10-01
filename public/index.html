@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Chat application</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
-        <link rel="icon" href="/img/favicon.png">
-        <link rel="stylesheet" href="/css/styles.min.css">
-     
-    </head>
-    <body>
-      <div class="centered-form">
-          <div class="centered-form__box">
-                <form action="./chat.html">
-                    <h3>Whatschat</h3>
-                    <label >Name</label>
-                    <input type="text" name="name"  required>
-                    <label >Room id</label>
-                    <input type="text" name="room" required>
-                    <button type="submit" name="button">Join</button>
-                </form>
-          </div>
-      </div>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsChat😎</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+    <div class="form-body">
+        <div class="website-logo">
+            <div class="logo">
+                <img class="logo-size" src="img/logo.png" alt="WhatsChat😎">
+            </div>
+        </div>
+        <div class="row">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <img src="img/logo.png" alt="WhatsChat😎">
+                    <hr>
+                    <h1>Chat within one Platform</h1>
+                    <p>Access to the most Awesome Chat-app in the entire industry.</p>
+                </div>
+            </div>
+
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <div class="website-logo-inside">
+                        </div>
+                        <h3>WhatsChat😎</h3>
+                        <p>Have a Break Have a chichat</p>
+                        <form action="./chat.html">
+                            <input class="form-control" type="text" name="username" placeholder="Name" required>
+                            <input class="form-control" type="text" name="roomid" placeholder="Roomid" required>
+                            <div class="form-button full-width">
+                                <button id="submit" type="submit" class="ibtn btn-forget">Join</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+
 </html>
